@@ -81,8 +81,6 @@ $$
 
 The encoder $E(y)$ maps $y$ to $q(z|y)$ and the loss is:
 
-`L_VAE(x) = E_q(z|x)[log p(x|z)] - D_KL(q(z|x) || p(z))`
-
 ![VAE Loss](https://latex.codecogs.com/png.image?\dpi{150}&space;\mathcal{L}_{\text{VAE}}(x)&space;=&space;\mathbb{E}_{q(z|x)}[\log&space;p(x|z)]&space;-&space;D_{\text{KL}}(q(z|x)&space;\|&space;p(z)))
 
 
