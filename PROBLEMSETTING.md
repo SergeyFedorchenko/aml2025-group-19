@@ -81,9 +81,7 @@ $$
 
 The encoder $E(y)$ maps $y$ to $q(z|y)$ and the loss is:
 
-$$
-\mathcal{L}_{\text{VAE}}(x) = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{\text{KL}}(q(z|x) \| p(z))
-$$
+`L_VAE(x) = E_q(z|x)[log p(x|z)] - D_KL(q(z|x) || p(z))`
 
 - **Pros**: Models cartoon space
 - **Cons**: Outputs often blurry, limited content control
