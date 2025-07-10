@@ -70,6 +70,33 @@ $$
 
 - **Pros**: Simple, fast
 - **Cons**: Does not change texture or structure
+---
+## Our Contribution
+### Losses Adjustment
+
+We enhanced the original CycleGAN loss function by incorporating some other parts. This encourages the generator to preserve semantic and textural similarity in the high-level feature space, leading to sharper and more realistic results. The perceptual loss was weighted carefully to avoid overpowering the cycle and adversarial components.
+
+### Dataset Preprocessing
+We manually filtered the training dataset to remove non-character and irrelevant images that could introduce noise into the model's learning. This improved the consistency and domain alignment between source and target distributions, helping the model focus on meaningful semantic transformations.
+Model Choice
+
+### Model Choice
+We conducted an extensive comparative study of several image-to-image translation architectures, including Pix2Pix, CUT, and attention-augmented variants of CycleGAN. Through empirical evaluation of already acquired results, we found that classic CycleGAN offered the best trade-off between training stability, simplicity, and controllability for our task. This informed our decision to retain CycleGAN as the backbone, while focusing our improvements on loss design and data refinement rather than structural overhauls.
+
+
+## Statistical Baseline
+
+### Color Histogram Matching
+
+A statistical baseline that adjusts the RGB channel statistics of real images to match those of the cartoon domain:
+
+$$
+\hat{x}_i = \sigma_Y \left( \frac{x_i - \mu_X}{\sigma_X} \right) + \mu_Y
+$$
+
+- **Pros**: Simple, fast
+- **Cons**: Does not change texture or structure
+
 
 
 ---
