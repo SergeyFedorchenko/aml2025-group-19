@@ -58,7 +58,7 @@ Both $G$ and $F$ are trained jointly using adversarial, cycle-consistency, and i
 
 ---
 
-## Baseline Models
+## Statistical Baseline
 
 ### Color Histogram Matching
 
@@ -71,21 +71,6 @@ $$
 - **Pros**: Simple, fast
 - **Cons**: Does not change texture or structure
 
-### Vanilla Variational Autoencoder (VAE)
-
-Trained on the cartoon domain $Y$:
-
-$$
-z \sim \mathcal{N}(0, I), \quad \hat{y} = D(z)
-$$
-
-The encoder $E(y)$ maps $y$ to $q(z|y)$ and the loss is:
-
-![VAE Loss](https://latex.codecogs.com/png.image?\dpi{150}&space;\mathcal{L}_{\text{VAE}}(x)&space;=&space;\mathbb{E}_{q(z|x)}[\log&space;p(x|z)]&space;-&space;D_{\text{KL}}(q(z|x)&space;\|&space;p(z)))
-
-
-- **Pros**: Models cartoon space
-- **Cons**: Outputs often blurry, limited content control
 
 ---
 
