@@ -80,30 +80,12 @@ Model Choice
 We conducted an extensive comparative study of several image-to-image translation architectures, including Pix2Pix, CUT, and attention-augmented variants of CycleGAN. Through empirical evaluation of already acquired results, we found that classic CycleGAN offered the best trade-off between training stability, simplicity, and controllability for our task. This informed our decision to retain CycleGAN as the backbone, while focusing our improvements on loss design and data refinement rather than structural overhauls.
 
 
-## Statistical Baseline
-
-### Color Histogram Matching
-
-A statistical baseline that adjusts the RGB channel statistics of real images to match those of the cartoon domain:
-
-$$
-\hat{x}_i = \sigma_Y \left( \frac{x_i - \mu_X}{\sigma_X} \right) + \mu_Y
-$$
-
-- **Pros**: Simple, fast
-- **Cons**: Does not change texture or structure
-
-
-
----
 
 ## Results
 
 ### Qualitative Examples
 
-| Real Image       | Stylized Output     |
-|------------------|---------------------|
-| (insert sample)  | (insert cartoon)    |
+![Example](example.jpg)
 
 ### Quantitative Metrics
 
@@ -114,22 +96,19 @@ $$
   238 - resnet9
   200 - resnet9 with loss adjustements 
 
-### User Study (Optional)
 
-- Ratings for style accuracy, realism, and semantic alignment from 10 participants
 
 ### Training Loss Curves
 
-- Adversarial, cycle, and identity losses plotted over training
+![loss_G](loss_G.jpg)
 
-
+![loss_D](loss_D.jpg)
 
 ## Challenges
 
-- **Training instability** (GANs are sensitive to hyperparameters)
-- **Domain gap** (real vs. cartoon textures and colors)
-- **Artifacts** (color bleeding, loss of facial detail)
-- **Overfitting** (if cartoon dataset lacks variety)
+- Not enough GPU and time to train big transformers
+- Limited capabilities of GAN's
+- Lack of photos redrawn in a cartoon style to train entity-to-entity
 
 ---
 
