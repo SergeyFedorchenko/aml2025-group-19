@@ -31,7 +31,7 @@ Both $G$ and $F$ are trained jointly using adversarial, cycle-consistency, and i
 ### Dataset and Preprocessing
 
 - **Domain A (Real-world)**: 1000 photos from COCO and Unsplash
-- **Domain B (Cartoon)**: 1200 Ghibli frames extracted via `ffmpeg`
+- **Domain B (Cartoon)**: 400 Prostokvashino frames extracted via `ffmpeg`
 - Images resized to $256 \times 256$ and normalized to $[-1, 1]$
 
 **Split**:
@@ -50,11 +50,7 @@ Both $G$ and $F$ are trained jointly using adversarial, cycle-consistency, and i
 ## Models
 
 - **CycleGAN**: Adversarial training with cycle-consistency
-- **SelfDistill (2023)**: Non-adversarial style distillation
-- **Diffusion Models**: Iterative denoising (e.g., DDIM, Stable Diffusion)
 - **Transformer-based Encoders**: Cross-domain attention (e.g., StyleFormer)
-- **CLIP-guided Stylization**: CLIP loss between output and text/reference
-- **Neural Style Transfer**: Optimization-based (e.g., Gatys et al.)
 
 ---
 
@@ -105,30 +101,30 @@ $$
 
 ### Qualitative Examples
 
-| Real Image       | Stylized Output     |
-|------------------|---------------------|
-| (insert sample)  | (insert cartoon)    |
+![Example](example.jpg)
 
 ### Quantitative Metrics
 
 - **FID**: Lower = more realistic cartoon style
+  We received
+  386 - starting dataset
+  300 - naive color transfer
+  238 - resnet9
+  200 - resnet9 with loss adjustements 
 
-### User Study (Optional)
 
-- Ratings for style accuracy, realism, and semantic alignment from 10 participants
 
 ### Training Loss Curves
 
-- Adversarial, cycle, and identity losses plotted over training
+![loss_G](loss_g.jpg)
 
----
+![loss_D](loss_d.jpg)
 
 ## Challenges
 
-- **Training instability** (GANs are sensitive to hyperparameters)
-- **Domain gap** (real vs. cartoon textures and colors)
-- **Artifacts** (color bleeding, loss of facial detail)
-- **Overfitting** (if cartoon dataset lacks variety)
+- Not enough GPU and time to train big transformers
+- Limited capabilities of GAN's
+- Lack of photos redrawn in a cartoon style to train entity-to-entity
 
 ---
 
