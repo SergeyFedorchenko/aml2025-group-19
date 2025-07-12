@@ -112,9 +112,6 @@ $$
 ### Quantitative Metrics
 
 - **FID**: Lower = more realistic cartoon style
-- **LPIPS**: Lower = better content preservation
-- **SSIM**: Higher = better structural retention
-- **(Optional)**: CLIP similarity, Intra-LPIPS for diversity
 
 ### User Study (Optional)
 
