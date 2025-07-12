@@ -89,10 +89,14 @@ We conducted an extensive comparative study of several image-to-image translatio
 ### Quantitative Metrics
 
 - **FID**: Lower = more realistic cartoon style
-  We received
+  We received:
+  
   386 - starting dataset
+  
   300 - naive color transfer
+  
   238 - resnet9
+  
   200 - resnet9 with loss adjustements 
 
 
