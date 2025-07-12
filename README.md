@@ -100,9 +100,9 @@ We conducted an extensive comparative study of several image-to-image translatio
 
 ### Training Loss Curves
 
-![loss_G](loss_g.jpg)
+![loss_G](loss_G.jpg)
 
-![loss_D](loss_d.jpg)
+![loss_D](loss_D.jpg)
 
 ## Challenges
 
