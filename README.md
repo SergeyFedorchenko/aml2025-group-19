@@ -101,9 +101,7 @@ $$
 
 ### Qualitative Examples
 
-| Real Image       | Stylized Output     |
-|------------------|---------------------|
-| (insert sample)  | (insert cartoon)    |
+![Example](example.png)
 
 ### Quantitative Metrics
 
