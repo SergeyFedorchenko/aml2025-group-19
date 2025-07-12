@@ -112,15 +112,13 @@ $$
   238 - resnet9
   200 - resnet9 with loss adjustements 
 
-### User Study (Optional)
 
-- Ratings for style accuracy, realism, and semantic alignment from 10 participants
 
 ### Training Loss Curves
 
-- Adversarial, cycle, and identity losses plotted over training
+![loss_g](loss_g.jpg)
 
-
+![loss_d](loss_d.jpg)
 
 ## Challenges
 
