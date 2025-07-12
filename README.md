@@ -101,7 +101,7 @@ $$
 
 ### Qualitative Examples
 
-![Example](example.png)
+![Example](example.jpg)
 
 ### Quantitative Metrics
 
