@@ -77,7 +77,7 @@ We manually filtered the training dataset to remove non-character and irrelevant
 Model Choice
 
 ### Model Choice
-We conducted an extensive comparative study of several image-to-image translation architectures, including Pix2Pix, CUT, and attention-augmented variants of CycleGAN. Through empirical evaluation of already acquired results, we found that classic CycleGAN offered the best trade-off between training stability, simplicity, and controllability for our task. This informed our decision to retain CycleGAN as the backbone, while focusing our improvements on loss design and data refinement rather than structural overhauls.
+We conducted an extensive comparative study of several image-to-image translation architectures, including Pix2Pix and attention-augmented variants of CycleGAN. Through empirical evaluation of already acquired results, we found that classic CycleGAN offered the best trade-off between training stability, simplicity, and controllability for our task. This informed our decision to retain CycleGAN with the ResNet as the backbone, while focusing our improvements on loss design and data refinement rather than structural overhauls.
 
 
 
