@@ -116,16 +116,15 @@ $$
 
 ### Training Loss Curves
 
-![loss_g](loss_g.jpg)
+![loss_G](loss_g.jpg)
 
-![loss_d](loss_d.jpg)
+![loss_D](loss_d.jpg)
 
 ## Challenges
 
-- **Training instability** (GANs are sensitive to hyperparameters)
-- **Domain gap** (real vs. cartoon textures and colors)
-- **Artifacts** (color bleeding, loss of facial detail)
-- **Overfitting** (if cartoon dataset lacks variety)
+- Not enough GPU and time to train big transformers
+- Limited capabilities of GAN's
+- Lack of photos redrawn in a cartoon style to train entity-to-entity
 
 ---
 
