@@ -42,7 +42,6 @@ Both $G$ and $F$ are trained jointly using adversarial, cycle-consistency, and i
 ### Evaluation Metrics
 
 - **Fréchet Inception Distance (FID)**: Measures similarity between distributions of generated images and cartoon data.
-- **LPIPS**: Perceptual similarity between input and output.
 - **Optional human study**: Rating on style, realism, and content preservation.
 
 ---
